@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  :root {
+    --tw-prose-body: theme('colors.gray.700');
+    --tw-prose-headings: theme('colors.gray.900');
+    --tw-prose-links: theme('colors.blue.500');
+    --tw-prose-code: theme('colors.gray.800');
+    --tw-prose-code-bg: theme('colors.gray.100');
+    --tw-prose-pre-bg: theme('colors.gray.100');
+  }
+
+  .dark {
+    --tw-prose-body: theme('colors.gray.300');
+    --tw-prose-headings: theme('colors.gray.100');
+    --tw-prose-links: theme('colors.blue.400');
+    --tw-prose-code: theme('colors.purple.400');
+    --tw-prose-code-bg: theme('colors.gray.800');
+    --tw-prose-pre-bg: theme('colors.gray.800');
+  }
+}
+
+/* Стили для скроллбара */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(75, 85, 99, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 85, 99, 0.7);
+} 
